@@ -35,7 +35,7 @@
             "cropX": 0,
             "cropY": 0,
             "selectable": false,
-            "src": "./01.png",
+            "src": "https://raw.githubusercontent.com/zetcco/FabricJS-Thumbnail-Creator/master/01.png",
             "crossOrigin": null,
             "filters": []
         },
