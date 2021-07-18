@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+body {
+    font-family:  Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    background: url('bg2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+.sidebar {
+    position: fixed;
+    /* 2 lines commented below are to center buttons vertically along the side bar */
+    /* display: flex; */
+    /* align-items: center; */
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background : #FFEBF0;
+}
+
+.btnContainer {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.btnContainer button {
+    width: 100%;
+    margin: 10px 0px;
+    border: 1px black;
+    padding: 10px;
+    color: white;
+    background : -moz-linear-gradient(-0.46% 51.87% 0.6deg,rgba(255, 95, 111, 1) 0%,rgba(239, 60, 103, 1) 99.55%);
+    background : -webkit-linear-gradient(0.6deg, rgba(255, 95, 111, 1) 0%, rgba(239, 60, 103, 1) 99.55%);
+    background : -webkit-gradient(linear,-0.46% 51.87% ,95.34% 48.32% ,color-stop(0,rgba(255, 95, 111, 1) ),color-stop(0.9955,rgba(239, 60, 103, 1) ));
+    background : -o-linear-gradient(0.6deg, rgba(255, 95, 111, 1) 0%, rgba(239, 60, 103, 1) 99.55%);
+    background : -ms-linear-gradient(0.6deg, rgba(255, 95, 111, 1) 0%, rgba(239, 60, 103, 1) 99.55%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5F6F', endColorstr='#EF3C67' ,GradientType=0)";
+    background : linear-gradient(89.4deg, rgba(255, 95, 111, 1) 0%, rgba(239, 60, 103, 1) 99.55%);
+    border-radius : 22px;
+    -moz-border-radius : 22px;
+    -webkit-border-radius : 22px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5F6F',endColorstr='#EF3C67' , GradientType=1);;
+    box-shadow : 7px 7px 22px rgba(0, 0, 0, 0.11);
+}
+
+.container {
+    margin-left: 15%;
+}
+
+.group {
+    float: left;
+    /* padding-right: 8px; */
+    margin: 0px 14px;
+    width: 51%;
+}
+
+.right {
+    width: 26%;
+}
+
+.panel {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    overflow: auto;
+    background : rgba(255, 255, 255, 1);
+    border-radius : 12px;
+    -moz-border-radius : 12px;
+    -webkit-border-radius : 12px;
+    box-shadow : 7px 7px 22px rgba(0, 0, 0, 0.11);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color='#000000') ;
+}
+
+.tabbed {
+    padding: 0px;
+    width: 100%;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.toRight {
+    float: right;
+}
+
+.toLeft {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.colorPicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 14px;
+    border:  5px solid rgb(230, 230, 230);
+}
+
+.colorPicker.strokePicker {
+    background-color: transparent;
+}
+
+.colorPicker.shadowPicker {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow : 3px 5px 7px rgba(0, 0, 0, 1);
+}
+
+.colorPicker#glowPick {
+    background-color: transparent;
+}
+
+.disabledPanel {
+    /* pointer-events: none; */
+    /* opacity: 0.6; */
+    display: none;
+}
+
+.canvas {
+    width: 100%; 
+    margin: 10px 0px;
+    background : rgba(255, 255, 255, 1);
+    border-radius : 12px;
+    -moz-border-radius : 12px;
+    -webkit-border-radius : 12px;
+    box-shadow : 7px 7px 22px rgba(0, 0, 0, 0.11);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color='#000000') ;
+    display: block;
+}
+
+.layer-panel-title {
+    display: inline-block;
+
+}
+
+.layer-control-container {
+    padding-top: 6px;
+    float: right;
+    margin-right: 15px;
+    cursor: default;
+}
+
+.layer-control-container a {
+    font-size: 12px;
+    border: solid 2px #e6e6e6;
+    border-radius: 31px;
+    padding: 3px 6px;
+}
+
+.layer-control-container a:hover {
+    background-color: #e6e6e6;
+    border-radius: 31px;
+    padding: 3px 6px;
+}
+
+.layer-control-container i {
+    padding: 6px 9px;
+}
+
+.layer-control-container i:hover {
+    padding: 6px 9px;
+    border-radius: 14px;
+    background-color: #e6e6e6;
+}
+
+.layerInfo i {
+    padding: 12px;
+    margin-right: 12px;
+    border: solid 2px #e6e6e6;
+    border-radius: 12px;
+}
+
+.panel p {
+    font-weight: bold;
+    color : #808080;
+    margin: 0px;
+    padding-left: 16px;
+    padding-top: 7px;
+}
+
+.dropdown-content-table {
+    display: table;
+    width: 90%;
+}
+
+.tableCell {
+    height: 55px;
+}
+
+.tableCell.toggleCell {
+    width: 20%;
+    text-align: center;
+}
+
+.tableCell.labelCell {
+    width: 17%;
+}
+
+.tool label {
+    font-size: 12px;
+    font-weight: bold;
+    color : #808080;
+    position: relative;
+    top: -0.15rem;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.layer {
+    margin: 10px;
+    padding: 15px;
+    border-radius : 12px;
+    background-color: #f2f2f2;
+    -moz-border-radius : 12px;
+    -webkit-border-radius : 12px; 
+    /* overflow: auto; */
+    cursor: grab;
+}
+
+.layer a {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;;
+}
+
+
+.largeBtn {
+    display: inline-block;
+    border-style : Solid;
+    background-color: #F74D6B;
+    border-color : #F74D6B;
+    color: white;
+    font-size: 13.4px;
+    border-width : 2px;
+    border-radius : 39px;
+    -moz-border-radius : 39px;
+    -webkit-border-radius : 39px; 
+    padding: 5px 8px;
+    width: 37%;
+}
+
+.largeBtn:hover {
+    /* margin: 0px 4px; */
+    /* display: inline; */
+    color : #F74D6B;
+    border-style : Solid;
+    background-color: transparent;
+    border-color : #F74D6B;
+    /* border-width : 1px; */
+    /* border-radius : 9px; */
+    /* -moz-border-radius : 9px; */
+    /* -webkit-border-radius : 9px;  */
+}
+
+.largeBtn-container {
+    text-align: center;
+}
+
+.upload-area {
+    background-color: transparent;
+    text-align: center;
+    display: block;
+    margin: 12px 12px;
+    line-height: 50px;
+    height: 50px;
+    font-weight: bold;
+    border-style : Dashed;
+    border-color : #F74D6B;
+    color : #F74D6B;
+    border-width : 3.5px;
+    border-radius : 20px;
+    -moz-border-radius : 20px;
+    -webkit-border-radius : 20px; 
+    cursor: pointer;
+}
+
+#image-upload {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.smallBtn {
+    margin: 0px 4px;
+    display: inline;
+    border-style : Solid;
+    background-color: transparent;
+    border-color : #F74D6B;
+    color : #F74D6B;
+    border-width : 2px;
+    border-radius : 39px;
+    -moz-border-radius : 39px;
+    -webkit-border-radius : 39px; 
+    padding: 5px 8px;
+    font-size: 11px;
+    vertical-align: center;
+}
+
+.smallBtn:hover {
+    /* margin: 0px 4px; */
+    /* display: inline; */
+    color: white;
+    border-style : Solid;
+    background-color: #F74D6B;
+    border-color : #F74D6B;
+    /* border-width : 1px; */
+    /* border-radius : 9px; */
+    /* -moz-border-radius : 9px; */
+    /* -webkit-border-radius : 9px;  */
+}
+
+.smallBtn.checked {
+    color: white;
+    border-style : Solid;
+    background-color: #F74D6B;
+    border-color : #F74D6B; 
+}
+
+label.smallBtn input {
+    position: absolute;
+    opacity: 0;
+}
+
+.styleBtn {
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+    background-color: #FFEBF0;
+}
+
+.selected {
+    background-color: #FFEBF0;
+}
+
+.dropdown-list {
+    width: 100%;
+    margin-top: 9px;
+    padding: 0px;
+    overflow: auto;
+    /* display: inline; */
+}
+
+.dropdown-list ul {
+    list-style-type: none;
+    overflow: auto;
+}
+
+.dropdown-list ul li {
+    float: left;
+}
+
+.dropdown-content {
+    display: none;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background : #F4F4F4;
+    background : rgba(244, 244, 244, 1);
+    border-radius : 0px 0px 15px 15px;
+    -moz-border-radius : 0px 0px 15px 15px;
+    -webkit-border-radius : 0px 0px 15px 15px; 
+    clear: left;
+}
+
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+.dropdown-list input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+.dropdown-list input[type=radio] + label {
+    float: left;
+    width: 25%;
+    background-color: #e6e6e6;
+}
+
+.dropdown-list input[type=radio] + label a {
+    text-align: center;
+    padding: 0px 12px;
+}
+.dropdown-list input[type=radio] + label.lastTab {
+    border-radius: 0px 15px 0px 0px;
+}
+.dropdown-list input[type=radio] + label.firstTab {
+    border-radius: 15px 0px 0px 0px;
+}
+.label-title-container {
+    text-align: center;
+    padding: 8px 0px;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+.dropdown-list input[type=radio]:checked + label { 
+    background-image: none;
+    background-color: #F4F4F4;
+    /* position: relative; */
+    /* top: 5px; */
+
+}

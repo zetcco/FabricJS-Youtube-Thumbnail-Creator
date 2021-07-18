@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="download.js"></script>
+    <script src="dragula.min.js"></script>
+    <link href="color-picker.min.css" rel="stylesheet">
+    <link
+        href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="grapick.min.css">
+    <script src="grapick.min.js"></script>
+    <link rel="stylesheet" href="dragula.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="color-picker.min.js"></script>
+    <script src="fontfaceobserver.standalone.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://kit.fontawesome.com/714891686d.js" crossorigin="anonymous"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="btnContainer">
+            <button id="downloadImage">Download Thumbnail</button>
+            <button id="downloadTemplate">Download Template</button>
+            <button>Change Template</button>
+            <button id="resetTemplate">Reset Template</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="group">
+            <div class="panel">
+                <canvas id="canvas" height="720" width="1280"></canvas>
+            </div>
+            <div class="panel">
+                <p>Styles</p>
+                <div class="dropdown-list">
+                    <input type="radio" id="fill" name="radios" class="dropdownBtn" checked>
+                    <label for="fill" class="firstTab">
+                        <div class="label-title-container"><a>Fill</a></div>
+                    </label>
+                    <input type="radio" id="outline" name="radios" class="dropdownBtn">
+                    <label for="outline">
+                        <div class="label-title-container"><a>Outline</a></div>
+                    </label>
+                    <input type="radio" id="shadow" name="radios" class="dropdownBtn">
+                    <label for="shadow">
+                        <div class="label-title-container"><a>Shadow</a></div>
+                    </label>
+                    <input type="radio" id="glow" name="radios" class="dropdownBtn">
+                    <label for="glow" class="lastTab">
+                        <div class="label-title-container"><a>Glow</a></div>
+                    </label>
+                </div>
+                <div class="dropdown-content" id="dropdown_fill">
+                    <table class="dropdown-content-table">
+                        <tr class="tool">
+                            <td class="tableCell toggleCell">
+                                <input id="fillToggle" type="radio" name="fill" checked>
+                            </td>
+                            <td class="tableCell labelCell">
+                                <label for="fillToggle">Fill</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <div id="fillPick" class="colorPicker"></div>
+                            </td>
+                            <!-- <input type="color" id="color_picker"> -->
+                        </tr>
+                        <tr class="tool">
+                            <td class="tableCell toggleCell">
+                                <input id="gradientFill" type="radio" name="fill">
+                            </td>
+                            <td class="tableCell labelCell">
+                                <label for="gradientFill">Gradient</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <div id="gp" class="disabled"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="dropdown-content" id="dropdown_outline">
+                    <table class="dropdown-content-table">
+                        <tr class="tool">
+                            <td rowspan="2" class="tableCell toggleCell">
+                                <input id="strokeToggle" type="checkbox" name="stroke">
+                            </td>
+                            <td rowspan="2" class="tableCell labelCell">
+                                <label for="strokeToggle">Stroke</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <label>Color</label>
+                            </td>
+                            <td>
+                                <div id="strokePick" class="colorPicker"></div>
+                            </td>
+                        </tr>
+                        <tr class="tool">
+                            <td class="tableCell inputCell">
+                                <label>Size</label>
+                            </td>
+                            <td>
+                                <input type="range" value="1" min="1" max="100" id="stroke_width" class="toolInput">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="dropdown-content" id="dropdown_shadow">
+                    <table class="dropdown-content-table">
+                        <tr class="tool">
+                            <td rowspan="3" class="tableCell toggleCell">
+                                <input id="shadowToggle" type="checkbox" name="shadow">
+                            </td>
+                            <td rowspan="3" class="tableCell labelCell">
+                                <label for="shadowToggle">Shadow</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <label>Color</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <div id="shadowPick" class="colorPicker"></div>
+                            </td>
+                        </tr>
+                        <tr class="tool">
+                            <td class="tableCell inputCell">
+                                <label>Distance</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <input type="range" value="0" min="0" max="250" id="shadow_dis">
+                            </td>
+                        </tr>
+                        <tr class="tool">
+                            <td class="tableCell inputCell">
+                                <label>Feather</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <input type="range" value="0" min="0" max="50" id="shadow_blur">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="dropdown-content" id="dropdown_glow">
+                    <table class="dropdown-content-table">
+                        <tr class="tool">
+                            <td rowspan="2" class="tableCell toggleCell">
+                                <input id="glowToggle" type="checkbox" name="glow">
+                            </td>
+                            <td rowspan="2" class="tableCell labelCell">
+                                <label for="glowToggle">Glow</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <label>Color</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <div id="glowPick" class="colorPicker"></div>
+                            </td>
+                        </tr>
+                        <tr class="tool">
+                            <td class="tableCell inputCell">
+                                <label>Feather</label>
+                            </td>
+                            <td class="tableCell inputCell">
+                                <input type="range" value="0" min="0" max="250" id="glow_feather">
+                            </td>
+                        </tr>
+                    </table>
+                </div> 
+            </div>
+            <div class="panel" id="font">
+                <p>Font</p>
+                <div>
+                    <div class="tool">
+                        <label>Family</label>
+                        <select id="font_selector">
+                            <option>Carmen Sans</option>
+                            <option>Lobster</option>
+                        </select>
+                    </div>
+                    <div class="tool">
+                        <label>Styles</label>
+                        <input type="checkbox" id="is_bold">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group right">
+            <div class="panel">
+                <p>Add</p>
+                <label for="image-upload" class="upload-area label">Upload Image</label>
+                <input type="file" name="photo" id="image-upload" />
+                <div class="largeBtn-container">
+                    <a id="add_text" class="largeBtn">Add Text</a>
+                    <a id="add_text" class="largeBtn">Add Clipart</a>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="flex space-between">
+                    <div class="layer-panel-title">
+                        <p>Layers</p>
+                    </div>
+                    <div class="layer-control-container">
+                        <a id="deleteAll">Delete All</a>
+                        <div id="layer-order-controls" class="disabled toRight">
+                            <i class="fa fa-angle-double-up" id="bringToFront"></i>
+                            <i class="fa fa-angle-up" id="bringForward"></i>
+                            <i class="fa fa-angle-down" id="sendBackwards"></i>
+                            <i class="fa fa-angle-double-down" id="sendToBack"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper" style="clear: right;">
+                    <div id="left">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script_style.js"></script>
+    <script src="script_hex.js"></script>
+</body>
+<!-- <script src="script_hex.js"></script> -->
+
+</html>

@@ -34,8 +34,7 @@
             "skewY": 0,
             "cropX": 0,
             "cropY": 0,
-            "selectable": false,
-            "src": "https://raw.githubusercontent.com/zetcco/FabricJS-Thumbnail-Creator/master/01.png",
+            "src": "file:///E:/Lectures-Recording/CSC113a%20(web%20dev)/Practical%20Sessions/Projects/FabricJs%20Image%20Editor/01.png",
             "crossOrigin": null,
             "filters": []
         },
@@ -44,39 +43,13 @@
             "version": "4.1.0",
             "originX": "left",
             "originY": "top",
-            "left": 57.68,
-            "top": 47.44,
-            "width": 661.23,
+            "left": 50,
+            "top": 50,
+            "width": 550.34,
             "height": 169.5,
-            "fill": {
-                "type": "linear",
-                "coords": {
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 661.23046875,
-                    "y2": 169.5
-                },
-                "colorStops": [
-                    {
-                        "color": "#ff6d00",
-                        "offset": 0.01
-                    },
-                    {
-                        "color": "#fff700",
-                        "offset": 0.51
-                    },
-                    {
-                        "color": "#ff6d00",
-                        "offset": 0.99
-                    }
-                ],
-                "offsetX": 0,
-                "offsetY": 0,
-                "gradientUnits": "pixels",
-                "gradientTransform": null
-            },
-            "stroke": "#111b9c",
-            "strokeWidth": 4.9,
+            "fill": "rgb(0,0,0)",
+            "stroke": null,
+            "strokeWidth": 1,
             "strokeDashArray": null,
             "strokeLineCap": "butt",
             "strokeDashOffset": 0,
@@ -96,9 +69,9 @@
             "globalCompositeOperation": "source-over",
             "skewX": 0,
             "skewY": 0,
-            "text": "MAYFAIR",
+            "text": "Add text",
             "fontSize": 150,
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "fontFamily": "Helvetica",
             "fontStyle": "normal",
             "lineHeight": 1.16,
@@ -108,7 +81,6 @@
             "textAlign": "left",
             "textBackgroundColor": "",
             "charSpacing": 0,
-            "selectable": true,
             "styles": {}
         },
         {
@@ -118,37 +90,11 @@
             "originY": "top",
             "left": 50,
             "top": 200,
-            "width": 291.58,
+            "width": 550.34,
             "height": 169.5,
-            "fill": {
-                "type": "linear",
-                "coords": {
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 550.341796875,
-                    "y2": 169.5
-                },
-                "colorStops": [
-                    {
-                        "color": "#00ff1e",
-                        "offset": 0.01
-                    },
-                    {
-                        "color": "#fff700",
-                        "offset": 0.51
-                    },
-                    {
-                        "color": "#00ff2a",
-                        "offset": 0.99
-                    }
-                ],
-                "offsetX": 0,
-                "offsetY": 0,
-                "gradientUnits": "pixels",
-                "gradientTransform": null
-            },
-            "stroke": "#280cb6",
-            "strokeWidth": 4.5,
+            "fill": "rgb(0,0,0)",
+            "stroke": null,
+            "strokeWidth": 1,
             "strokeDashArray": null,
             "strokeLineCap": "butt",
             "strokeDashOffset": 0,
@@ -168,9 +114,9 @@
             "globalCompositeOperation": "source-over",
             "skewX": 0,
             "skewY": 0,
-            "text": "Soft",
+            "text": "Add text",
             "fontSize": 150,
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "fontFamily": "Helvetica",
             "fontStyle": "normal",
             "lineHeight": 1.16,
@@ -180,7 +126,6 @@
             "textAlign": "left",
             "textBackgroundColor": "",
             "charSpacing": 0,
-            "selectable": true,
             "styles": {}
         },
         {
@@ -190,37 +135,11 @@
             "originY": "top",
             "left": 50,
             "top": 350,
-            "width": 388.84,
+            "width": 550.34,
             "height": 169.5,
-            "fill": {
-                "type": "linear",
-                "coords": {
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 550.341796875,
-                    "y2": 169.5
-                },
-                "colorStops": [
-                    {
-                        "color": "#00ff1e",
-                        "offset": 0.01
-                    },
-                    {
-                        "color": "#fff700",
-                        "offset": 0.51
-                    },
-                    {
-                        "color": "#00ff2a",
-                        "offset": 0.99
-                    }
-                ],
-                "offsetX": 0,
-                "offsetY": 0,
-                "gradientUnits": "pixels",
-                "gradientTransform": null
-            },
-            "stroke": "#1a1986",
-            "strokeWidth": 5.7,
+            "fill": "rgb(0,0,0)",
+            "stroke": null,
+            "strokeWidth": 1,
             "strokeDashArray": null,
             "strokeLineCap": "butt",
             "strokeDashOffset": 0,
@@ -240,9 +159,9 @@
             "globalCompositeOperation": "source-over",
             "skewX": 0,
             "skewY": 0,
-            "text": "Toilet",
+            "text": "Add text",
             "fontSize": 150,
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "fontFamily": "Helvetica",
             "fontStyle": "normal",
             "lineHeight": 1.16,
@@ -252,7 +171,6 @@
             "textAlign": "left",
             "textBackgroundColor": "",
             "charSpacing": 0,
-            "selectable": true,
             "styles": {}
         },
         {
@@ -262,37 +180,11 @@
             "originY": "top",
             "left": 50,
             "top": 500,
-            "width": 316.85,
+            "width": 550.34,
             "height": 169.5,
-            "fill": {
-                "type": "linear",
-                "coords": {
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 550.341796875,
-                    "y2": 169.5
-                },
-                "colorStops": [
-                    {
-                        "color": "#00ff1e",
-                        "offset": 0.01
-                    },
-                    {
-                        "color": "#fff700",
-                        "offset": 0.51
-                    },
-                    {
-                        "color": "#00ff2a",
-                        "offset": 0.99
-                    }
-                ],
-                "offsetX": 0,
-                "offsetY": 0,
-                "gradientUnits": "pixels",
-                "gradientTransform": null
-            },
-            "stroke": "#100e95",
-            "strokeWidth": 5.4,
+            "fill": "rgb(0,0,0)",
+            "stroke": null,
+            "strokeWidth": 1,
             "strokeDashArray": null,
             "strokeLineCap": "butt",
             "strokeDashOffset": 0,
@@ -312,9 +204,9 @@
             "globalCompositeOperation": "source-over",
             "skewX": 0,
             "skewY": 0,
-            "text": "Seat",
+            "text": "Add text",
             "fontSize": 150,
-            "fontWeight": "bold",
+            "fontWeight": "normal",
             "fontFamily": "Helvetica",
             "fontStyle": "normal",
             "lineHeight": 1.16,
@@ -324,7 +216,6 @@
             "textAlign": "left",
             "textBackgroundColor": "",
             "charSpacing": 0,
-            "selectable": true,
             "styles": {}
         }
     ]
